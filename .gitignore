@@ -83,3 +83,4 @@ terragrunt-debug.tfvars.json
 
 # Extra ignores
 .claude/
+backend.tfvars
