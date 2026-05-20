@@ -36,7 +36,7 @@ resource "aws_lb_target_group" "this" {
 
   health_check {
     enabled             = each.value.health_check.enabled
-    path                = local.is_alb ? each.value.health_check.path : null
+    path                = (local.is_alb || each.value.target_type == "alb") ? each.value.health_check.path : null
     port                = each.value.health_check.port
     protocol            = coalesce(each.value.health_check.protocol, each.value.protocol)
     healthy_threshold   = each.value.health_check.healthy_threshold

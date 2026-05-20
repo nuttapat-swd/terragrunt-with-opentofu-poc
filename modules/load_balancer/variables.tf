@@ -45,7 +45,7 @@ variable "target_groups" {
   type = map(object({
     port             = number
     protocol         = string # HTTP, HTTPS, TCP, TLS, UDP
-    target_type      = string # instance, ip, lambda
+    target_type      = string # instance, ip, lambda, alb
     health_check = optional(object({
       enabled             = optional(bool, true)
       path                = optional(string, "/")
