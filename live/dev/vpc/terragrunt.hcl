@@ -35,8 +35,8 @@ inputs = {
     # "10.0.103.0/24",
   ]
 
-  enable_nat_gateway = false
-  # single_nat_gateway = false
+  enable_nat_gateway = true
+  single_nat_gateway = true
   enable_s3_endpoint = true
 
   tags = local.tags
