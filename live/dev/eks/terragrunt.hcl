@@ -23,7 +23,7 @@ terraform {
 inputs = {
   cluster_name = "${local.env}-cluster"
 
-  kubernetes_version = "1.32"
+  kubernetes_version = "1.35"
 
   subnet_ids = dependency.vpc.outputs.private_subnet_ids
 
